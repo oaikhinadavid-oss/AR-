@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>VisionAR - True AR</title>
+    <title>TMNT 3D - Turtle Power AR</title>
     
     <!-- Google Model Viewer for True AR -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
@@ -12,12 +12,12 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
         :root {
-            --bg-base: #070b12;
-            --bg-surface: #0f1621;
-            --accent: #00f0ff;
+            --bg-base: #0a0f0d;
+            --bg-surface: #141a17;
+            --accent: #32CD32;
             --text-main: #ffffff;
             --text-muted: #8b9cb6;
-            --border-color: #1e2d40;
+            --border-color: #1f292e;
             --card-bg: rgba(15, 22, 33, 0.7);
         }
 
@@ -202,21 +202,28 @@
     <div class="top-bar">
         <div class="logo">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h4l3-9 5 18 3-9h5"/></svg>
-            VisionAR
+            TMNT 3D
         </div>
     </div>
 
     <!-- HOME -->
     <div id="view-explore" class="view active">
         <div class="hero">
-            <h1>See Beyond<br>Reality.</h1>
-            <p>Your camera is your new canvas. Map your environment and place digital assets directly into the real world.</p>
+            <h1>Turtle Power<br>in 3D AR</h1>
+            <p>The sewers have gone digital. Map your surroundings and bring the Ninja Turtles into your world.</p>
         </div>
         <div class="card" onclick="switchTab('capture', document.getElementById('nav-capture'))">
             <div class="card-icon">📷</div>
             <div>
                 <h4 style="font-size: 15px;">Launch AR Scanner</h4>
                 <p style="font-size: 12px; color: var(--text-muted); margin-top:3px;">Tap to open live camera</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-icon">🍕</div>
+            <div>
+                <h4 style="font-size: 15px;">Pizza Mode</h4>
+                <p style="font-size: 12px; color: var(--text-muted); margin-top:3px;">Order virtual pizza! (Coming Soon)</p>
             </div>
         </div>
         <button class="btn-primary" onclick="switchTab('library', document.getElementById('nav-library'))">Browse 3D Models</button>
@@ -270,9 +277,9 @@
 
     <!-- LIBRARY (TRUE AR HERE) -->
     <div id="view-library" class="view">
-        <h1 style="margin-bottom: 5px;">Asset Library</h1>
+        <h1 style="margin-bottom: 5px;">Turtle Training Dojo</h1>
         <p style="color:var(--text-muted); font-size:12px; margin-bottom:20px;">
-            Select an object to place in your environment.
+            Select a training simulation to place in your environment.
         </p>
 
         <div class="search-container">
@@ -283,7 +290,7 @@
         </div>
 
         <!-- Model 1 -->
-        <div class="lib-card">
+        <div class="lib-card" style="border: 2px solid #0000FF;">
             <model-viewer 
                 src="https://modelviewer.dev/shared-assets/models/Astronaut.glb" 
                 ios-src="https://modelviewer.dev/shared-assets/models/Astronaut.usdz" 
@@ -299,13 +306,13 @@
             </model-viewer>
             
             <div class="lib-info">
-                <div class="lib-title">Apollo Astronaut</div>
-                <div class="lib-meta">Space Collection</div>
+                <div class="lib-title">Leonardo</div>
+                <div class="lib-meta">Blue Mask - Combat Drone Simulation</div>
             </div>
         </div>
 
         <!-- Model 2 -->
-        <div class="lib-card">
+        <div class="lib-card" style="border: 2px solid #FF0000;">
             <model-viewer 
                 src="https://modelviewer.dev/shared-assets/models/glTF-Sample-Models/2.0/DamagedHelmet/glTF/DamagedHelmet.gltf" 
                 ios-src="https://modelviewer.dev/shared-assets/models/glTF-Sample-Models/2.0/DamagedHelmet/glTF/DamagedHelmet.usdz"
@@ -320,13 +327,13 @@
                 </button>
             </model-viewer>
             <div class="lib-info">
-                <div class="lib-title">Sci-Fi Helmet</div>
-                <div class="lib-meta">Gaming Assets</div>
+                <div class="lib-title">Raphael</div>
+                <div class="lib-meta">Red Mask - Strength Trainer Simulation</div>
             </div>
         </div>
 
         <!-- Model 3 (New) -->
-        <div class="lib-card">
+        <div class="lib-card" style="border: 2px solid #A020F0;">
             <div class="badge">New</div>
             <model-viewer
                 src="https://modelviewer.dev/shared-assets/models/Chair.glb"
@@ -342,13 +349,13 @@
                 </button>
             </model-viewer>
             <div class="lib-info">
-                <div class="lib-title">Modern Chair</div>
-                <div class="lib-meta">Interior Design</div>
+                <div class="lib-title">Donatello</div>
+                <div class="lib-meta">Purple Mask - Tech Analyzer Simulation</div>
             </div>
         </div>
 
         <!-- Model 4 (New) -->
-        <div class="lib-card">
+        <div class="lib-card" style="border: 2px solid #FFA500;">
             <model-viewer
                 src="https://modelviewer.dev/shared-assets/models/GeoPlanter.glb"
                 ios-src="https://modelviewer.dev/shared-assets/models/GeoPlanter.usdz"
@@ -363,8 +370,8 @@
                 </button>
             </model-viewer>
             <div class="lib-info">
-                <div class="lib-title">Geo Planter</div>
-                <div class="lib-meta">Decorations</div>
+                <div class="lib-title">Michelangelo</div>
+                <div class="lib-meta">Orange Mask - Party Scout Simulation</div>
             </div>
         </div>
 
